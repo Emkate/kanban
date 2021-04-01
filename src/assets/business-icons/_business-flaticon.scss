@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "BusinessFlaticon";
+  src: url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fimanager:before {
+  display: inline-block;
+  font-family: "BusinessFlaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-001-block-user:before { content: "\f100"; }
+.flaticon-002-gantt-chart:before { content: "\f101"; }
+.flaticon-003-configuration:before { content: "\f102"; }
+.flaticon-004-presentation:before { content: "\f103"; }
+.flaticon-005-testing:before { content: "\f104"; }
+.flaticon-006-line-chart:before { content: "\f105"; }
+.flaticon-007-money:before { content: "\f106"; }
+.flaticon-008-savings:before { content: "\f107"; }
+.flaticon-009-goal:before { content: "\f108"; }
+.flaticon-010-email:before { content: "\f109"; }
+.flaticon-011-price-tag:before { content: "\f10a"; }
+.flaticon-012-user:before { content: "\f10b"; }
+.flaticon-013-briefcase:before { content: "\f10c"; }
+.flaticon-014-search:before { content: "\f10d"; }
+.flaticon-015-document:before { content: "\f10e"; }
+.flaticon-016-business-strategy:before { content: "\f10f"; }
+.flaticon-017-calendar:before { content: "\f110"; }
+.flaticon-018-office:before { content: "\f111"; }
+.flaticon-019-idea:before { content: "\f112"; }
+.flaticon-020-tree-structure:before { content: "\f113"; }
+.flaticon-021-mail:before { content: "\f114"; }
+.flaticon-022-statistics:before { content: "\f115"; }
+.flaticon-023-exchange:before { content: "\f116"; }
+.flaticon-024-percentage:before { content: "\f117"; }
+.flaticon-025-salary:before { content: "\f118"; }
+.flaticon-026-add-reminder:before { content: "\f119"; }
+.flaticon-027-tasks:before { content: "\f11a"; }
+.flaticon-028-percentage:before { content: "\f11b"; }
+.flaticon-029-video-marketing:before { content: "\f11c"; }
+.flaticon-030-settings:before { content: "\f11d"; }
+.flaticon-031-profit:before { content: "\f11e"; }
+.flaticon-032-copyright:before { content: "\f11f"; }
+.flaticon-033-management:before { content: "\f120"; }
+.flaticon-034-bill:before { content: "\f121"; }
+.flaticon-035-worldwide:before { content: "\f122"; }
+.flaticon-036-form:before { content: "\f123"; }
+.flaticon-037-talk-show:before { content: "\f124"; }
+.flaticon-038-contact-book:before { content: "\f125"; }
+.flaticon-039-alert:before { content: "\f126"; }
+.flaticon-040-branching:before { content: "\f127"; }
+.flaticon-041-options:before { content: "\f128"; }
+.flaticon-042-searching:before { content: "\f129"; }
+.flaticon-043-businessman:before { content: "\f12a"; }
+.flaticon-044-pay-day:before { content: "\f12b"; }
+.flaticon-045-rss:before { content: "\f12c"; }
+.flaticon-046-incoming-message:before { content: "\f12d"; }
+.flaticon-047-target:before { content: "\f12e"; }
+.flaticon-048-pay-per-click:before { content: "\f12f"; }
+.flaticon-049-mail:before { content: "\f130"; }
+.flaticon-050-chat:before { content: "\f131"; }
+.flaticon-051-save-money:before { content: "\f132"; }
+.flaticon-052-document:before { content: "\f133"; }
+.flaticon-053-planning:before { content: "\f134"; }
+.flaticon-054-pie-chart:before { content: "\f135"; }
+.flaticon-055-keyword:before { content: "\f136"; }
+.flaticon-056-service:before { content: "\f137"; }
+.flaticon-057-send-money:before { content: "\f138"; }
+.flaticon-058-growth:before { content: "\f139"; }
+.flaticon-059-scatter-plot:before { content: "\f13a"; }
+.flaticon-060-at:before { content: "\f13b"; }
+.flaticon-061-cloud:before { content: "\f13c"; }
+.flaticon-062-audit:before { content: "\f13d"; }
+.flaticon-063-heart:before { content: "\f13e"; }
+.flaticon-064-term:before { content: "\f13f"; }
+.flaticon-065-laptop:before { content: "\f140"; }
+.flaticon-066-money-transfer:before { content: "\f141"; }
+.flaticon-067-deadline:before { content: "\f142"; }
+.flaticon-068-settings:before { content: "\f143"; }
+.flaticon-069-graph:before { content: "\f144"; }
+.flaticon-070-time-management:before { content: "\f145"; }
+.flaticon-071-email:before { content: "\f146"; }
+.flaticon-072-target:before { content: "\f147"; }
+.flaticon-073-histogram:before { content: "\f148"; }
+.flaticon-074-project-management:before { content: "\f149"; }
+.flaticon-075-insurance:before { content: "\f14a"; }
+.flaticon-076-discount:before { content: "\f14b"; }
+.flaticon-077-job-search:before { content: "\f14c"; }
+.flaticon-078-internet:before { content: "\f14d"; }
+.flaticon-079-controlling-card:before { content: "\f14e"; }
+.flaticon-080-dollar:before { content: "\f14f"; }
+.flaticon-081-checked:before { content: "\f150"; }
+.flaticon-082-growth:before { content: "\f151"; }
+.flaticon-083-invitation:before { content: "\f152"; }
+.flaticon-084-coin:before { content: "\f153"; }
+.flaticon-085-growth:before { content: "\f154"; }
+.flaticon-086-marketing:before { content: "\f155"; }
+.flaticon-087-content-marketing:before { content: "\f156"; }
+.flaticon-088-user:before { content: "\f157"; }
+.flaticon-089-settings:before { content: "\f158"; }
+.flaticon-090-mail:before { content: "\f159"; }
+.flaticon-091-web-development:before { content: "\f15a"; }
+.flaticon-092-slider-navigation:before { content: "\f15b"; }
+.flaticon-093-idea:before { content: "\f15c"; }
+.flaticon-094-searching:before { content: "\f15d"; }
+.flaticon-095-browser:before { content: "\f15e"; }
+.flaticon-096-money-bag:before { content: "\f15f"; }
+.flaticon-097-spam:before { content: "\f160"; }
+.flaticon-098-mobile-analytics:before { content: "\f161"; }
+.flaticon-099-diagram:before { content: "\f162"; }
+.flaticon-100-check:before { content: "\f163"; }
+.flaticon-101-interest:before { content: "\f164"; }
+.flaticon-102-growth:before { content: "\f165"; }
+.flaticon-103-arrow:before { content: "\f166"; }
+.flaticon-104-loupe:before { content: "\f167"; }
+
+$font-Flaticon-001-block-user: "\f100";
+$font-Flaticon-002-gantt-chart: "\f101";
+$font-Flaticon-003-configuration: "\f102";
+$font-Flaticon-004-presentation: "\f103";
+$font-Flaticon-005-testing: "\f104";
+$font-Flaticon-006-line-chart: "\f105";
+$font-Flaticon-007-money: "\f106";
+$font-Flaticon-008-savings: "\f107";
+$font-Flaticon-009-goal: "\f108";
+$font-Flaticon-010-email: "\f109";
+$font-Flaticon-011-price-tag: "\f10a";
+$font-Flaticon-012-user: "\f10b";
+$font-Flaticon-013-briefcase: "\f10c";
+$font-Flaticon-014-search: "\f10d";
+$font-Flaticon-015-document: "\f10e";
+$font-Flaticon-016-business-strategy: "\f10f";
+$font-Flaticon-017-calendar: "\f110";
+$font-Flaticon-018-office: "\f111";
+$font-Flaticon-019-idea: "\f112";
+$font-Flaticon-020-tree-structure: "\f113";
+$font-Flaticon-021-mail: "\f114";
+$font-Flaticon-022-statistics: "\f115";
+$font-Flaticon-023-exchange: "\f116";
+$font-Flaticon-024-percentage: "\f117";
+$font-Flaticon-025-salary: "\f118";
+$font-Flaticon-026-add-reminder: "\f119";
+$font-Flaticon-027-tasks: "\f11a";
+$font-Flaticon-028-percentage: "\f11b";
+$font-Flaticon-029-video-marketing: "\f11c";
+$font-Flaticon-030-settings: "\f11d";
+$font-Flaticon-031-profit: "\f11e";
+$font-Flaticon-032-copyright: "\f11f";
+$font-Flaticon-033-management: "\f120";
+$font-Flaticon-034-bill: "\f121";
+$font-Flaticon-035-worldwide: "\f122";
+$font-Flaticon-036-form: "\f123";
+$font-Flaticon-037-talk-show: "\f124";
+$font-Flaticon-038-contact-book: "\f125";
+$font-Flaticon-039-alert: "\f126";
+$font-Flaticon-040-branching: "\f127";
+$font-Flaticon-041-options: "\f128";
+$font-Flaticon-042-searching: "\f129";
+$font-Flaticon-043-businessman: "\f12a";
+$font-Flaticon-044-pay-day: "\f12b";
+$font-Flaticon-045-rss: "\f12c";
+$font-Flaticon-046-incoming-message: "\f12d";
+$font-Flaticon-047-target: "\f12e";
+$font-Flaticon-048-pay-per-click: "\f12f";
+$font-Flaticon-049-mail: "\f130";
+$font-Flaticon-050-chat: "\f131";
+$font-Flaticon-051-save-money: "\f132";
+$font-Flaticon-052-document: "\f133";
+$font-Flaticon-053-planning: "\f134";
+$font-Flaticon-054-pie-chart: "\f135";
+$font-Flaticon-055-keyword: "\f136";
+$font-Flaticon-056-service: "\f137";
+$font-Flaticon-057-send-money: "\f138";
+$font-Flaticon-058-growth: "\f139";
+$font-Flaticon-059-scatter-plot: "\f13a";
+$font-Flaticon-060-at: "\f13b";
+$font-Flaticon-061-cloud: "\f13c";
+$font-Flaticon-062-audit: "\f13d";
+$font-Flaticon-063-heart: "\f13e";
+$font-Flaticon-064-term: "\f13f";
+$font-Flaticon-065-laptop: "\f140";
+$font-Flaticon-066-money-transfer: "\f141";
+$font-Flaticon-067-deadline: "\f142";
+$font-Flaticon-068-settings: "\f143";
+$font-Flaticon-069-graph: "\f144";
+$font-Flaticon-070-time-management: "\f145";
+$font-Flaticon-071-email: "\f146";
+$font-Flaticon-072-target: "\f147";
+$font-Flaticon-073-histogram: "\f148";
+$font-Flaticon-074-project-management: "\f149";
+$font-Flaticon-075-insurance: "\f14a";
+$font-Flaticon-076-discount: "\f14b";
+$font-Flaticon-077-job-search: "\f14c";
+$font-Flaticon-078-internet: "\f14d";
+$font-Flaticon-079-controlling-card: "\f14e";
+$font-Flaticon-080-dollar: "\f14f";
+$font-Flaticon-081-checked: "\f150";
+$font-Flaticon-082-growth: "\f151";
+$font-Flaticon-083-invitation: "\f152";
+$font-Flaticon-084-coin: "\f153";
+$font-Flaticon-085-growth: "\f154";
+$font-Flaticon-086-marketing: "\f155";
+$font-Flaticon-087-content-marketing: "\f156";
+$font-Flaticon-088-user: "\f157";
+$font-Flaticon-089-settings: "\f158";
+$font-Flaticon-090-mail: "\f159";
+$font-Flaticon-091-web-development: "\f15a";
+$font-Flaticon-092-slider-navigation: "\f15b";
+$font-Flaticon-093-idea: "\f15c";
+$font-Flaticon-094-searching: "\f15d";
+$font-Flaticon-095-browser: "\f15e";
+$font-Flaticon-096-money-bag: "\f15f";
+$font-Flaticon-097-spam: "\f160";
+$font-Flaticon-098-mobile-analytics: "\f161";
+$font-Flaticon-099-diagram: "\f162";
+$font-Flaticon-100-check: "\f163";
+$font-Flaticon-101-interest: "\f164";
+$font-Flaticon-102-growth: "\f165";
+$font-Flaticon-103-arrow: "\f166";
+$font-Flaticon-104-loupe: "\f167";
