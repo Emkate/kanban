@@ -1,13 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap');
+
 html, body {
   padding: 0;
   margin: 0;
+}
+
+* {
+  font-family: 'Lexend', sans-serif;
+  color: #27334d;
   box-sizing: border-box;
-}
-
-.flaticon {
-  font-family: "Flaticon";
-}
-
-.flaticon-business {
-  font-family: "BusinessFlaticon";
 }

@@ -31,8 +31,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/icons/_flaticon.scss",
-              "src/assets/business-icons/_business-flaticon.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,8 +94,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/icons/_flaticon.scss",
-              "src/assets/business-icons/_business-flaticon.scss",
               "src/styles.scss"
             ],
             "scripts": []
