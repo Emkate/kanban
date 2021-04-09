@@ -7,6 +7,9 @@
     background-color: #f0f6fc;
     height: 100vh;
     width: calc(100% - 60px);
+    display: flex;
+    padding: 24px;
+
 
     &--sidebaropened {
       width: calc(100% - 300px);

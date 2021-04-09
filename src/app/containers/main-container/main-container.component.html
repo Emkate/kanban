@@ -1,5 +1,8 @@
 
 <div class="main-container">
   <app-sidebar [selectedItem]="selectedNavbarItem" (changeSidebarState)="setSelectedNavbarState($event)"></app-sidebar>
-  <div class="main-container__columns-container"></div>
+  <div class="main-container__columns-container">
+    <app-column-item></app-column-item>
+    <app-column-item></app-column-item>
+  </div>
 </div>

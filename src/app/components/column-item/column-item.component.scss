@@ -1,0 +1,17 @@
+.column-item {
+  width: 320px;
+  height: 100%;
+  flex-shrink: 0;
+  margin-right: 26px;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    width: 100%;
+    min-height: 200px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+  }
+}
