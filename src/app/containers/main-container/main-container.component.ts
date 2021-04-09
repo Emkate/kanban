@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-container.component.scss']
 })
 export class MainContainerComponent implements OnInit {
-  opened = false;
+  selectedNavbarItem = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  setSelectedNavbarState(navbarState: string): void {
+    this.selectedNavbarItem = navbarState;
+  }
 }

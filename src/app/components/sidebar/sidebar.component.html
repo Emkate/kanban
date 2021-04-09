@@ -1,15 +1,15 @@
-<div class="sidebar" [class.sidebar--opened]="opened">
+<div class="sidebar" [class.sidebar--opened]="selectedItem !== ''">
   <div class="sidebar__menu">
     <div class="sidebar__menu-top">
       <a routerLink="/" class="menu-top__logo"></a>
-      <button class="menu-top__nav-item">
-        <i class="flaticon-business flaticon-002-gantt-chart"></i>
+      <button class="menu-top__nav-item" [class.menu-top__nav-item--selected]="selectedItem === 'main'" (click)="selectSidebarItem('main')">
+        <ibm-icon-grid class="nav-item__icon" size="32"></ibm-icon-grid>
       </button>
-      <button class="menu-top__nav-item">
-        <i class="flaticon flaticon-001-mail-inbox-app"></i>
+      <button class="menu-top__nav-item" [class.menu-top__nav-item--selected]="selectedItem === 'people'" (click)="selectSidebarItem('people')">
+        <ibm-icon-grid class="nav-item__icon" size="32"></ibm-icon-grid>
       </button>
-      <button class="menu-top__nav-item">
-        <i class="flaticon flaticon-001-mail-inbox-app"></i>
+      <button class="menu-top__nav-item" [class.menu-top__nav-item--selected]="selectedItem === 'tasks'" (click)="selectSidebarItem('tasks')">
+        <ibm-icon-grid class="nav-item__icon" size="32"></ibm-icon-grid>
       </button>
     </div>
     <div class="sidebar__menu-bottom"></div>

@@ -22,6 +22,46 @@
       display: flex;
       flex-direction: column;
       padding: 20px 8px;
+
+      .menu-top {
+        &__nav-item {
+          padding: 5px 3px;
+          margin: 6px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+          transition: .3s;
+          outline: none;
+
+          &:hover {
+            background-color: #eaecf1;
+          }
+
+          &--selected {
+            background-color: #2a60e4;
+
+            &:hover {
+              background-color: #2a60e4;
+            }
+
+            .nav-item__icon {
+              ::ng-deep {
+                svg {
+                  fill: #fff;
+                }
+              }
+            }
+          }
+
+          .nav-item__icon {
+            height: 32px;
+          }
+        }
+      }
     }
   }
 }
