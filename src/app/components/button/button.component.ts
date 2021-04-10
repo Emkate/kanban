@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ButtonIcon } from './button-icon.type';
 import { ButtonType } from './button.type';
 
 @Component({
@@ -8,6 +9,7 @@ import { ButtonType } from './button.type';
 })
 export class ButtonComponent implements OnInit {
   @Input() buttonType: ButtonType = 'default';
+  @Input() icon: ButtonIcon = 'add';
 
   constructor() { }
 

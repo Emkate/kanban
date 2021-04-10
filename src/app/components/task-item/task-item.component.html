@@ -1,1 +1,15 @@
-<p>task-item works!</p>
+<div *ngIf="taskData" draggable="true" class="task-item">
+  <div class="task-item__header">
+    <div class="task-item__header-tags">
+      <ng-container *ngFor="let tag of taskData.tags"></ng-container>
+      <app-button buttonType="small-icon"></app-button>
+    </div>
+    <button class="task-item__header-options">
+      <ibm-icon-overflow-menu-horizontal size="24"></ibm-icon-overflow-menu-horizontal>
+    </button>
+  </div>
+  <div class="task-item__content">
+    {{ taskData.description }}
+  </div>
+  <div class="task-item__footer"></div>
+</div>

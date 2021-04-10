@@ -1,0 +1,46 @@
+.button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.default-button {
+  background-color: rgba(42, 96, 228, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 14px 0;
+
+  &:hover {
+    background-color: rgba(42, 96, 228, 0.15);
+  }
+
+  &__icon {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #2a60e4;
+    margin-right: 4px;
+
+    ::ng-deep {
+      svg {
+        fill: #fff;
+      }
+    }
+
+    &-item {
+      height: 16px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    color: #2a60e4;
+    line-height: 1;
+    letter-spacing: -0.3px;
+  }
+}

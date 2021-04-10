@@ -1,0 +1,33 @@
+.task-item {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 12px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    &-tags {
+
+    }
+
+    &-options {
+      background-color: transparent;
+      border: none;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  &__content {
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

@@ -1,7 +1,7 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GridModule } from '@carbon/icons-angular';
+import { GridModule, AddModule, OverflowMenuHorizontalModule } from '@carbon/icons-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,9 @@ import { ButtonComponent } from './components/button/button.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GridModule
+    GridModule,
+    AddModule,
+    OverflowMenuHorizontalModule
   ],
   providers: [],
   bootstrap: [AppComponent],

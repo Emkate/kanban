@@ -1,7 +1,12 @@
-<button [ngSwitch]="buttonType">
-  <div *ngSwitchCase="'small'">small button</div>
-  <div *ngSwitchCase="'small-icon'">small-icon button</div>
-  <div *ngSwitchCase="'filled'">filled button</div>
-  <div *ngSwitchCase="'icon'">icon button</div>
-  <div *ngSwitchDefault>default button</div>
-</button>
+<ng-container [ngSwitch]="buttonType">
+  <button *ngSwitchCase="'small'">small button</button>
+  <button *ngSwitchCase="'small-icon'">small-icon button</button>
+  <button *ngSwitchCase="'filled'">filled button</button>
+  <button *ngSwitchCase="'icon'">icon button</button>
+  <button *ngSwitchDefault class="button default-button">
+    <div class="default-button__icon">
+      <ibm-icon-add class="default-button__icon-item" size="16"></ibm-icon-add>
+    </div>
+    <span class="default-button__text">Add another task</span>
+  </button>
+</ng-container>

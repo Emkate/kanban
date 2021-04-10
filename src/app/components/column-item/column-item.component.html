@@ -1,6 +1,9 @@
 <div class="column-item">
   <div class="column-item__header">Column name</div>
   <div class="column-item__content">
+    <ng-container *ngFor="let item of items">
+      <app-task-item [taskData]="item"></app-task-item>
+    </ng-container>
     <app-button></app-button>
   </div>
 </div>
