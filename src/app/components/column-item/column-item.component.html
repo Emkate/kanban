@@ -1,9 +1,9 @@
-<div class="column-item">
-  <div class="column-item__header">Column name</div>
-  <div class="column-item__content">
-    <ng-container *ngFor="let item of items">
+<div *ngIf="data" class="column-item">
+  <div class="column-item__header">{{ data.name }}</div>
+  <div class="column-item__content" (drop)="handleDropTask($event)" (dragover)="handleDragTask($event)">
+    <ng-container *ngFor="let item of data.tasks">
       <app-task-item [taskData]="item"></app-task-item>
     </ng-container>
-    <app-button></app-button>
+    <app-button buttonText="Add another task"></app-button>
   </div>
 </div>

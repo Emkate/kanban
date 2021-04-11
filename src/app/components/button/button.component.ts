@@ -10,6 +10,7 @@ import { ButtonType } from './button.type';
 export class ButtonComponent implements OnInit {
   @Input() buttonType: ButtonType = 'default';
   @Input() icon: ButtonIcon = 'add';
+  @Input() buttonText = '';
 
   constructor() { }
 

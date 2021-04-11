@@ -2,7 +2,8 @@
 <div class="main-container">
   <app-sidebar [selectedItem]="selectedNavbarItem" (changeSidebarState)="setSelectedNavbarState($event)"></app-sidebar>
   <div class="main-container__columns-container">
-    <app-column-item></app-column-item>
-    <app-column-item></app-column-item>
+    <ng-container *ngFor="let column of columnItems">
+      <app-column-item [data]="column"></app-column-item>
+    </ng-container>
   </div>
 </div>

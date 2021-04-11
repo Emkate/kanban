@@ -1,8 +1,8 @@
-<div *ngIf="taskData" draggable="true" class="task-item">
+<div *ngIf="taskData" draggable="true" (dragstart)="handleDragStart($event)" class="task-item">
   <div class="task-item__header">
     <div class="task-item__header-tags">
       <ng-container *ngFor="let tag of taskData.tags"></ng-container>
-      <app-button buttonType="small-icon"></app-button>
+      <app-button [buttonType]="taskData.tags.length ? 'small-icon' : 'small'" buttonText="Add tag"></app-button>
     </div>
     <button class="task-item__header-options">
       <ibm-icon-overflow-menu-horizontal size="24"></ibm-icon-overflow-menu-horizontal>

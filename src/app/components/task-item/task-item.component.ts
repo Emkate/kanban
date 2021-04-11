@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Task } from './task.interface';
+import { DragService } from 'src/app/shared/drag.service';
+import { Task } from '../../shared/interfaces/task.interface';
 
 @Component({
   selector: 'app-task-item',
@@ -9,9 +10,16 @@ import { Task } from './task.interface';
 export class TaskItemComponent implements OnInit {
   @Input() taskData?: Task;
 
-  constructor() { }
+  constructor(
+    private dragService: DragService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  handleDragStart(event: DragEvent): void {
+    if (this.taskData) {
+      this.dragService.draggedTaskId$.next(this.taskData.id);
+    }
+  }
 }

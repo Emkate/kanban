@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { columns } from 'src/app/shared/data.mock';
 
 @Component({
   selector: 'app-main-container',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-container.component.scss']
 })
 export class MainContainerComponent implements OnInit {
+  columnItems = columns;
   selectedNavbarItem = '';
 
   constructor() { }
