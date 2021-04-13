@@ -1,10 +1,11 @@
 import { Task } from './interfaces/task.interface';
 import { ColumnItem } from './interfaces/column-item.interface';
+import { Tag } from './interfaces/tag.interface';
 
 export const tasks: Task[] = [
   {
     id: 1,
-    tags: ['writer'],
+    tagsIds: [1],
     description: 'Copywriting review for all paragraphs in app',
     usersIds: [],
     attachmentsIds: [],
@@ -12,7 +13,7 @@ export const tasks: Task[] = [
   },
   {
     id: 2,
-    tags: [],
+    tagsIds: [],
     description: 'Prepare grid system design',
     usersIds: [],
     attachmentsIds: [],
@@ -20,7 +21,7 @@ export const tasks: Task[] = [
   },
   {
     id: 3,
-    tags: [],
+    tagsIds: [],
     description: 'Setup repository',
     usersIds: [],
     attachmentsIds: [],
@@ -39,4 +40,10 @@ export const columns: ColumnItem[] = [
     name: 'In progress',
     tasks: tasks.filter(task => task.columnId === 2)
   }
+];
+
+export const tags: Tag[] = [
+  { id: 1, name: 'design', color: '#8a53ff' },
+  { id: 2, name: 'seo', color: '#ff9595' },
+  { id: 3, name: 'mobile app', color: '#1cbe81' }
 ];

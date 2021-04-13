@@ -1,8 +1,10 @@
 <div *ngIf="taskData" draggable="true" (dragstart)="handleDragStart($event)" class="task-item">
   <div class="task-item__header">
     <div class="task-item__header-tags">
-      <ng-container *ngFor="let tag of taskData.tags"></ng-container>
-      <app-button [buttonType]="taskData.tags.length ? 'small-icon' : 'small'" buttonText="Add tag"></app-button>
+      <ng-container *ngFor="let tagId of taskData.tagsIds">
+        <app-tag-item [data]="tagId | getData:'tag'" ></app-tag-item>
+      </ng-container>
+      <app-button [buttonType]="taskData.tagsIds.length ? 'small-icon' : 'small'" buttonText="Add tag"></app-button>
     </div>
     <button class="task-item__header-options">
       <ibm-icon-overflow-menu-horizontal size="24"></ibm-icon-overflow-menu-horizontal>
@@ -11,5 +13,10 @@
   <div class="task-item__content">
     {{ taskData.description }}
   </div>
-  <div class="task-item__footer"></div>
+  <div class="task-item__footer">
+    <div class="task-item__footer-users">
+
+    </div>
+    <div class="task-item__footer-details"></div>
+  </div>
 </div>

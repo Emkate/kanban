@@ -1,6 +1,6 @@
 export interface Task {
   id: number;
-  tags: string[];
+  tagsIds: number[];
   description: string;
   usersIds: number[];
   attachmentsIds: number[];
