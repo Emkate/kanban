@@ -1,0 +1,9 @@
+<div *ngIf="data" class="user-item" [style.background-image]="'url(' + data.thumb + ')'">
+
+  <div class="user-item__user-data">
+    <div class="user-data__profile-picture" [style.background-image]="'url(' + data.thumb + ')'"></div>
+    <div class="user-data__user-name">
+      {{ data.firstName + ' ' + data.lastName }}
+    </div>
+  </div>
+</div>

@@ -30,4 +30,14 @@
     font-size: 13px;
     font-weight: 500;
   }
+
+  &__footer {
+    margin-top: 14px;
+
+    &-users {
+      min-height: 32px;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
 }

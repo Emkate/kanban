@@ -8,7 +8,7 @@ import { Task } from '../../shared/interfaces/task.interface';
   styleUrls: ['./task-item.component.scss']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() taskData?: Task;
+  @Input() taskData: Task = {} as Task;
 
   constructor(
     private dragService: DragService

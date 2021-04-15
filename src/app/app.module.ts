@@ -13,6 +13,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { ButtonComponent } from './components/button/button.component';
 import { GetDataPipe } from './shared/pipes/get-data.pipe';
 import { TagItemComponent } from './components/tag-item/tag-item.component';
+import { UserItemComponent } from './components/user-item/user-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TagItemComponent } from './components/tag-item/tag-item.component';
     TaskItemComponent,
     ButtonComponent,
     GetDataPipe,
-    TagItemComponent
+    TagItemComponent,
+    UserItemComponent
   ],
   imports: [
     BrowserModule,

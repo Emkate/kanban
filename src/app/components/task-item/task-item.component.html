@@ -15,7 +15,9 @@
   </div>
   <div class="task-item__footer">
     <div class="task-item__footer-users">
-
+      <ng-container *ngFor="let userId of taskData.usersIds">
+        <app-user-item [data]="userId | getData:'user'" ></app-user-item>
+      </ng-container>
     </div>
     <div class="task-item__footer-details"></div>
   </div>
