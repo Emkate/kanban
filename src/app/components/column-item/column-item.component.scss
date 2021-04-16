@@ -3,12 +3,12 @@
   height: 100%;
   flex-shrink: 0;
   margin-right: 26px;
-
+  
   &__header {
     margin-bottom: 20px;
     font-weight: 700;
   }
-
+  
   &__content {
     display: flex;
     flex-direction: column;
@@ -17,5 +17,15 @@
     background-color: rgba(0, 0, 0, 0.02);
     border-radius: 12px;
     padding: 18px;
+    position: relative;
+  }
+
+  &__dropzone {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: repeating-linear-gradient(135deg, #ffffff77, #ffffff77 20px, #00000077 20px, #00000077 40px);
   }
 }

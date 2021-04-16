@@ -7,7 +7,7 @@ import { User } from 'src/app/shared/interfaces/user.interface';
   styleUrls: ['./user-item.component.scss']
 })
 export class UserItemComponent implements OnInit {
-  @Input() data: User = {} as User;
+  @Input() data?: User;
   constructor() { }
 
   ngOnInit(): void {

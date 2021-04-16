@@ -8,7 +8,7 @@ import { Task } from '../../shared/interfaces/task.interface';
   styleUrls: ['./task-item.component.scss']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() taskData: Task = {} as Task;
+  @Input() taskData: Task | undefined;
 
   constructor(
     private dragService: DragService
@@ -21,5 +21,10 @@ export class TaskItemComponent implements OnInit {
     if (this.taskData) {
       this.dragService.draggedTaskId$.next(this.taskData.id);
     }
+  }
+
+  handleDragEnd(event: DragEvent): void {
+    this.dragService.draggedTaskId$.next(0);
+    this.dragService.dragovererdColumnId$.next(0);
   }
 }

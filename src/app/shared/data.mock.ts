@@ -40,6 +40,11 @@ export const columns: ColumnItem[] = [
     id: 2,
     name: 'In progress',
     tasks: tasks.filter(task => task.columnId === 2)
+  },
+  {
+    id: 3,
+    name: 'In review',
+    tasks: tasks.filter(task => task.columnId === 3)
   }
 ];
 

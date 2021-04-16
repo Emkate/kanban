@@ -11,9 +11,11 @@ import { FiltersComponent } from './components/filters/filters.component';
 import { ColumnItemComponent } from './components/column-item/column-item.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { ButtonComponent } from './components/button/button.component';
-import { GetDataPipe } from './shared/pipes/get-data.pipe';
 import { TagItemComponent } from './components/tag-item/tag-item.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
+import { GetUserPipe } from './shared/pipes/get-user.pipe';
+import { GetTagPipe } from './shared/pipes/get-tag.pipe';
+import { GetTaskPipe } from './shared/pipes/get-task.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserItemComponent } from './components/user-item/user-item.component';
     ColumnItemComponent,
     TaskItemComponent,
     ButtonComponent,
-    GetDataPipe,
+    GetUserPipe,
+    GetTagPipe,
+    GetTaskPipe,
     TagItemComponent,
     UserItemComponent
   ],

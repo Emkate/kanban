@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DragService {
   draggedTaskId$: BehaviorSubject<number> = new BehaviorSubject(0);
+  dragovererdColumnId$: BehaviorSubject<number> = new BehaviorSubject(0);
 
   constructor() { }
 }

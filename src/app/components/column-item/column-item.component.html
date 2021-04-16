@@ -1,6 +1,9 @@
 <div *ngIf="data" class="column-item">
+  <pre>{{ (dragService.dragovererdColumnId$ | async) }}</pre>
+
   <div class="column-item__header">{{ data.name }}</div>
-  <div class="column-item__content" (drop)="handleDropTask($event)" (dragover)="handleDragTask($event)">
+  <div #columnContent class="column-item__content">
+    <div *ngIf="(dragService.dragovererdColumnId$ | async) === data.id" class="column-item__dropzone"></div>
     <ng-container *ngFor="let item of data.tasks">
       <app-task-item [taskData]="item"></app-task-item>
     </ng-container>
