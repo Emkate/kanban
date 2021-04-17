@@ -2,8 +2,11 @@
 <div class="main-container">
   <app-sidebar [selectedItem]="selectedNavbarItem" (changeSidebarState)="setSelectedNavbarState($event)"></app-sidebar>
   <div class="main-container__columns-container">
-    <ng-container *ngFor="let column of columnItems">
-      <app-column-item [data]="column"></app-column-item>
-    </ng-container>
+    <app-nav-panel></app-nav-panel>
+    <div class="columns-container__columns-wrapper">
+      <ng-container *ngFor="let column of columnItems">
+        <app-column-item [data]="column"></app-column-item>
+      </ng-container>
+    </div>
   </div>
 </div>

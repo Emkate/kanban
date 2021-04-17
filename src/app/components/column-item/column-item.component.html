@@ -1,6 +1,4 @@
 <div *ngIf="data" class="column-item">
-  <pre>{{ (dragService.dragovererdColumnId$ | async) }}</pre>
-
   <div class="column-item__header">{{ data.name }}</div>
   <div #columnContent class="column-item__content">
     <div *ngIf="(dragService.dragovererdColumnId$ | async) === data.id" class="column-item__dropzone"></div>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GridModule, AddModule, OverflowMenuHorizontalModule } from '@carbon/icons-angular';
+import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule } from '@carbon/icons-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { UserItemComponent } from './components/user-item/user-item.component';
 import { GetUserPipe } from './shared/pipes/get-user.pipe';
 import { GetTagPipe } from './shared/pipes/get-tag.pipe';
 import { GetTaskPipe } from './shared/pipes/get-task.pipe';
+import { NavPanelComponent } from './components/nav-panel/nav-panel.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,15 @@ import { GetTaskPipe } from './shared/pipes/get-task.pipe';
     GetTagPipe,
     GetTaskPipe,
     TagItemComponent,
-    UserItemComponent
+    UserItemComponent,
+    NavPanelComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GridModule,
     AddModule,
+    ArrowLeftModule,
     OverflowMenuHorizontalModule
   ],
   providers: [],

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { BehaviorSubject, combineLatest, fromEvent, Observable } from 'rxjs';
-import { debounceTime, filter, map, switchMap, tap, throttleTime, withLatestFrom } from 'rxjs/operators';
+import { fromEvent } from 'rxjs';
+import { filter, map, switchMap, tap, throttleTime, withLatestFrom } from 'rxjs/operators';
 import { DragService } from 'src/app/shared/drag.service';
 import { ColumnItem } from 'src/app/shared/interfaces/column-item.interface';
 
@@ -38,11 +38,8 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
         const columnPos = [column.offsetLeft + sidebarWidth, column.offsetTop];
         const dragPosition = [dragEvent.x - columnPos[0], dragEvent.y - columnPos[1]];
 
-        // console.log(columnPos);
         console.log(dragPosition);
-        // console.log(dragEvent);
       }),
-      tap(console.log)
     ).subscribe();
 
     fromEvent(this.columnContent?.nativeElement, 'drop').pipe(
@@ -55,7 +52,6 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
   }
 
   handleDropTask(event: any): void {
-    // event.preventDefault();
     console.log('DROP:', event);
     this.dragService.dragovererdColumnId$.next(0);
   }
