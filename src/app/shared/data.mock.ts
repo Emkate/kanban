@@ -2,6 +2,28 @@ import { Task } from './interfaces/task.interface';
 import { ColumnItem } from './interfaces/column-item.interface';
 import { Tag } from './interfaces/tag.interface';
 import { User } from './interfaces/user.interface';
+import { Project } from './interfaces/project.interface';
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    name: 'Kanban app',
+    status: 'In progress',
+    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+  },
+  {
+    id: 2,
+    name: 'Interview questions app',
+    status: 'In progress',
+    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+  },
+  {
+    id: 3,
+    name: 'Portfolio page',
+    status: 'In progress',
+    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+  }
+];
 
 export const tasks: Task[] = [
   {

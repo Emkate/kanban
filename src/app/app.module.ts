@@ -17,6 +17,8 @@ import { GetUserPipe } from './shared/pipes/get-user.pipe';
 import { GetTagPipe } from './shared/pipes/get-tag.pipe';
 import { GetTaskPipe } from './shared/pipes/get-task.pipe';
 import { NavPanelComponent } from './components/nav-panel/nav-panel.component';
+import { ProjectsContainerComponent } from './containers/projects-container/projects-container.component';
+import { ProjectItemComponent } from './components/project-item/project-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { NavPanelComponent } from './components/nav-panel/nav-panel.component';
     GetTaskPipe,
     TagItemComponent,
     UserItemComponent,
-    NavPanelComponent
+    NavPanelComponent,
+    ProjectsContainerComponent,
+    ProjectItemComponent
   ],
   imports: [
     BrowserModule,

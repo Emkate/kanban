@@ -1,0 +1,25 @@
+.projects-header {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.02);
+  padding: 40px;
+  border-radius: 10px;
+
+  app-project-item {
+    flex-shrink: 0;
+    width: calc((100% - 40px) / 3);
+    height: 200px;
+
+    &:nth-child(3n - 1) {
+      margin: 0 20px;
+    }
+  }
+}

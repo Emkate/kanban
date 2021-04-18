@@ -1,0 +1,6 @@
+<h1 class="projects-header">All projects</h1>
+<div class="projects-container">
+  <ng-container *ngFor="let project of projects" >
+    <app-project-item [data]="project"></app-project-item>
+  </ng-container>
+</div>
