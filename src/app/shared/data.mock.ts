@@ -9,19 +9,19 @@ export const projects: Project[] = [
     id: 1,
     name: 'Kanban app',
     status: 'In progress',
-    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+    background: 'linear-gradient(131deg, rgba(255,228,228,1) 33%, rgba(192,211,255,1) 33%, rgba(192,211,255,1) 66%, rgba(198,236,198,1) 66%)'
   },
   {
     id: 2,
     name: 'Interview questions app',
     status: 'In progress',
-    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+    background: 'linear-gradient(90deg, rgba(247,227,255,1) 33%, rgba(237,255,237,1) 33%, rgba(237,255,237,1) 66%, rgba(200,255,248,1) 66%)'
   },
   {
     id: 3,
     name: 'Portfolio page',
     status: 'In progress',
-    background: 'linear-gradient(131deg, rgba(255,193,193,1) 33%, rgba(64,119,255,1) 33%, rgba(64,119,255,1) 66%, rgba(44,214,150,1) 66%);'
+    background: 'linear-gradient(45deg, rgba(255,253,210,1) 33%, rgba(255,241,237,1) 33%, rgba(255,241,237,1) 66%, rgba(255,238,208,1) 66%)'
   }
 ];
 

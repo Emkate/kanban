@@ -4,4 +4,17 @@
   height: 100%;
   border-radius: 10px;
   background-color: #fefaed;
+  padding: 20px;
+  text-decoration: none;
+
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__status {
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+  }
 }
