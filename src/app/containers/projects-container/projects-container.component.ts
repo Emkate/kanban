@@ -10,8 +10,6 @@ import { Project } from 'src/app/shared/interfaces/project.interface';
 export class ProjectsContainerComponent implements OnInit {
   projects: Project[] = projects;
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 

@@ -1,4 +1,4 @@
-<a *ngIf="data" [routerLink]="['/project/' + data.id]" class="project-item" [ngStyle]="{'background': data.background}">
+<a *ngIf="data" [routerLink]="['/project/' + data.id]" class="project-item" [ngStyle]="data.background | background">
   <div class="project-item__name">{{ data.name }}</div>
   <div class="project-item__status">{{ data.status }}</div>
 </a>

@@ -9,7 +9,7 @@ export const projects: Project[] = [
     id: 1,
     name: 'Kanban app',
     status: 'In progress',
-    background: 'linear-gradient(131deg, rgba(255,228,228,1) 33%, rgba(192,211,255,1) 33%, rgba(192,211,255,1) 66%, rgba(198,236,198,1) 66%)'
+    background: 'linear-gradient(135deg, rgba(255,228,228,1) 33%, rgba(192,211,255,1) 33%, rgba(192,211,255,1) 66%, rgba(198,236,198,1) 66%)'
   },
   {
     id: 2,
@@ -22,7 +22,19 @@ export const projects: Project[] = [
     name: 'Portfolio page',
     status: 'In progress',
     background: 'linear-gradient(45deg, rgba(255,253,210,1) 33%, rgba(255,241,237,1) 33%, rgba(255,241,237,1) 66%, rgba(255,238,208,1) 66%)'
-  }
+  },
+  {
+    id: 4,
+    name: 'Background image',
+    status: 'To do',
+    background: 'url(assets/img/project-bg.jpg)'
+  },
+  {
+    id: 5,
+    name: 'Next test app',
+    status: 'To do',
+    background: 'url(assets/img/project2-bg.jpg)'
+  },
 ];
 
 export const tasks: Task[] = [
@@ -56,17 +68,32 @@ export const columns: ColumnItem[] = [
   {
     id: 1,
     name: 'To do',
-    tasks: tasks.filter(task => task.columnId === 1)
+    tasks: tasks.filter(task => task.columnId === 1),
+    projectId: 1
   },
   {
     id: 2,
     name: 'In progress',
-    tasks: tasks.filter(task => task.columnId === 2)
+    tasks: tasks.filter(task => task.columnId === 2),
+    projectId: 1
   },
   {
     id: 3,
     name: 'In review',
-    tasks: tasks.filter(task => task.columnId === 3)
+    tasks: tasks.filter(task => task.columnId === 3),
+    projectId: 1
+  },
+  {
+    id: 4,
+    name: 'To do',
+    tasks: tasks.filter(task => task.columnId === 4),
+    projectId: 2
+  },
+  {
+    id: 5,
+    name: 'In progress',
+    tasks: tasks.filter(task => task.columnId === 5),
+    projectId: 2
   }
 ];
 

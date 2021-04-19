@@ -1,5 +1,17 @@
-<div class="nav-panel">
-  <a routerLink="/" class="nav-panel__back-item">
-    <ibm-icon-arrow-left class="back-item__icon" size="20"></ibm-icon-arrow-left>
-  </a>
+<div *ngIf="projectData" class="nav-panel">
+  <div class="nav-panel__project-info">
+    <a routerLink="/" class="nav-panel__back-item">
+      <ibm-icon-arrow-left class="back-item__icon" size="20"></ibm-icon-arrow-left>
+    </a>
+
+    <div class="nav-panel__project-icon" [ngStyle]="{'background': projectData.background}">
+      <span>
+        {{ projectData.name | slice:0:1 }}
+      </span>
+    </div>
+    <div class="nav-panel__project-titles">
+      <span class="project-titles__name">{{ projectData.name }}</span>
+      <span class="project-titles__status">{{ projectData.status }}</span>
+    </div>
+  </div>
 </div>

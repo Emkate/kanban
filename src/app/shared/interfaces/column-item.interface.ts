@@ -4,4 +4,5 @@ export interface ColumnItem {
   id: number;
   name: string;
   tasks: Task[];
+  projectId: number;
 }

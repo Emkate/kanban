@@ -64,4 +64,11 @@
       }
     }
   }
+
+  &__items {
+    width: 240px;
+    height: 100%;
+    border-right: 1px #eaecf1 solid;
+    transition: .3s;
+  }
 }

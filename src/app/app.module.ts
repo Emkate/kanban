@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule } from '@carbon/icons-angular';
+import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule, EventsModule, ListCheckedModule } from '@carbon/icons-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,9 @@ import { GetTaskPipe } from './shared/pipes/get-task.pipe';
 import { NavPanelComponent } from './components/nav-panel/nav-panel.component';
 import { ProjectsContainerComponent } from './containers/projects-container/projects-container.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
+import { BackgroundPipe } from './shared/pipes/background.pipe';
+
+const iconsModules = [GridModule, AddModule, ArrowLeftModule, OverflowMenuHorizontalModule, EventsModule, ListCheckedModule];
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
     GetUserPipe,
     GetTagPipe,
     GetTaskPipe,
+    BackgroundPipe,
     TagItemComponent,
     UserItemComponent,
     NavPanelComponent,
@@ -41,10 +45,7 @@ import { ProjectItemComponent } from './components/project-item/project-item.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GridModule,
-    AddModule,
-    ArrowLeftModule,
-    OverflowMenuHorizontalModule
+    ...iconsModules
   ],
   providers: [],
   bootstrap: [AppComponent],

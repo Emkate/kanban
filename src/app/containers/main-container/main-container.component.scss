@@ -1,13 +1,16 @@
 .main-container {
   &__columns-container {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     right: 0;
     top: 0;
     bottom: 0;
     background-color: #faffff;
     height: 100vh;
     width: calc(100% - 60px);
-    padding: 24px;
+    padding: 24px 0;
+    transition: .3s;
 
     &--sidebaropened {
       width: calc(100% - 300px);
@@ -16,6 +19,9 @@
     .columns-container {
       &__columns-wrapper {
         display: flex;
+        height: 100%;
+        padding: 0 24px;
+        overflow-x: auto;
       }
     }
   }
