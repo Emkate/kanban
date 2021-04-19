@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule, EventsModule, ListCheckedModule } from '@carbon/icons-angular';
+import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule, EventsModule, ListCheckedModule, SettingsModule } from '@carbon/icons-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +21,15 @@ import { ProjectsContainerComponent } from './containers/projects-container/proj
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { BackgroundPipe } from './shared/pipes/background.pipe';
 
-const iconsModules = [GridModule, AddModule, ArrowLeftModule, OverflowMenuHorizontalModule, EventsModule, ListCheckedModule];
+const iconsModules = [
+  GridModule,
+  AddModule,
+  ArrowLeftModule,
+  OverflowMenuHorizontalModule,
+  EventsModule,
+  ListCheckedModule,
+  SettingsModule
+];
 
 @NgModule({
   declarations: [

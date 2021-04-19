@@ -111,3 +111,43 @@
     }
   }
 }
+
+.icon-button {
+  border: 2px #27334d solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  transition: .3s;
+
+  &__icon {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: .3s;
+
+    ::ng-deep {
+      svg {
+        fill: #27334d;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #27334d;
+
+    .icon-button__icon {
+      background-color: #27334d;
+
+      ::ng-deep {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

@@ -11,7 +11,11 @@
     </div>
   </button>
   <button *ngSwitchCase="'filled'">filled button</button>
-  <button *ngSwitchCase="'icon'">icon button</button>
+  <button *ngSwitchCase="'icon'" class="button icon-button">
+    <div class="icon-button__icon">
+      <ibm-icon-add class="icon-button__icon-item" size="32"></ibm-icon-add>
+    </div>
+  </button>
   <button *ngSwitchDefault class="button default-button">
     <div class="default-button__icon">
       <ibm-icon-add class="default-button__icon-item" size="16"></ibm-icon-add>
