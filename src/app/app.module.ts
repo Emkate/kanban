@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { GridModule, AddModule, OverflowMenuHorizontalModule, ArrowLeftModule, EventsModule, ListCheckedModule, SettingsModule } from '@carbon/icons-angular';
 
@@ -20,6 +21,7 @@ import { NavPanelComponent } from './components/nav-panel/nav-panel.component';
 import { ProjectsContainerComponent } from './containers/projects-container/projects-container.component';
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { BackgroundPipe } from './shared/pipes/background.pipe';
+import { BackdropComponent } from './components/backdrop/backdrop.component';
 
 const iconsModules = [
   GridModule,
@@ -48,10 +50,12 @@ const iconsModules = [
     UserItemComponent,
     NavPanelComponent,
     ProjectsContainerComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    BackdropComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ...iconsModules
   ],

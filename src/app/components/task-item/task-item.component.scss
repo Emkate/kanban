@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
+    min-height: 32px;
 
     &-tags {
       display: flex;
@@ -24,6 +25,14 @@
       border-radius: 50%;
       cursor: pointer;
       outline: none;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .header-options__icon {
+        height: 24px;
+      }
     }
   }
 
@@ -40,5 +49,30 @@
       display: flex;
       justify-content: flex-start;
     }
+  }
+}
+
+.menus {
+  &__tags-menu {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  &__options-menu {
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  &__floating-button {
+    position: fixed;
+    z-index: 10;
   }
 }

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { filter, map, switchMap, tap, throttleTime, withLatestFrom } from 'rxjs/operators';
-import { DragService } from 'src/app/shared/drag.service';
+import { DragService } from 'src/app/shared/services/drag.service';
 import { ColumnItem } from 'src/app/shared/interfaces/column-item.interface';
 
 @Component({
@@ -19,7 +19,6 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-
     const dragoverEvent$ = fromEvent(this.columnContent?.nativeElement, 'dragover');
 
     dragoverEvent$.pipe(
@@ -52,7 +51,6 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
   }
 
   handleDropTask(event: any): void {
-    console.log('DROP:', event);
     this.dragService.dragovererdColumnId$.next(0);
   }
 }

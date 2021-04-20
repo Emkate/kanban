@@ -10,10 +10,23 @@
       <ng-container *ngFor="let tagId of taskData.tagsIds">
         <app-tag-item [data]="tagId | getTag" ></app-tag-item>
       </ng-container>
-      <app-button [buttonType]="taskData.tagsIds.length ? 'small-icon' : 'small'" buttonText="Add tag"></app-button>
+      <app-button
+        [buttonType]="taskData.tagsIds.length ? 'small-icon' : 'small'"
+        buttonText="Add tag"
+        (click)="openMenu($event, 'tags')"
+        [class.menus__floating-button]="tagsMenuPosition[0]"
+        [style.left]="tagsMenuPosition[0] + 'px'"
+        [style.top]="tagsMenuPosition[1] + 'px'"
+      ></app-button>
     </div>
-    <button class="task-item__header-options">
-      <ibm-icon-overflow-menu-horizontal size="24"></ibm-icon-overflow-menu-horizontal>
+    <button
+      class="task-item__header-options"
+      (click)="openMenu($event, 'options')"
+      [class.menus__floating-button]="optionsMenuPosition[0]"
+      [style.right]="optionsMenuPosition[0] + 'px'"
+      [style.top]="optionsMenuPosition[1] + 'px'"
+    >
+      <ibm-icon-overflow-menu-horizontal class="header-options__icon" size="24"></ibm-icon-overflow-menu-horizontal>
     </button>
   </div>
   <div class="task-item__content">
@@ -27,4 +40,22 @@
     </div>
     <div class="task-item__footer-details"></div>
   </div>
+</div>
+
+<div *ngIf="taskData && tagsMenuPosition[0]"
+  class="menus__tags-menu"
+  (click)="closeMenu()"
+  [style.left]="tagsMenuPosition[0] + 'px'"
+  [style.top]="tagsMenuPosition[1] + 30 + 'px'"
+  [@enterAnimation]
+>
+</div>
+
+<div *ngIf="taskData && optionsMenuPosition[0]"
+  class="menus__options-menu"
+  (click)="closeMenu()"
+  [style.right]="optionsMenuPosition[0] + 'px'"
+  [style.top]="optionsMenuPosition[1] + 40 + 'px'"
+  [@enterAnimation]
+>
 </div>

@@ -1,0 +1,6 @@
+<div
+  *ngIf="sharedService.backdropVisible$ | async"
+  class="backdrop-layer"
+  [@enterAnimation]
+  (click)="closeBackdrop()"
+></div>
