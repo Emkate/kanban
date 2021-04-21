@@ -5,7 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BackgroundPipe implements PipeTransform {
   transform(value: string): { [key: string]: string } {
-    console.log(value);
     if (value.includes('url(')) {
       return {
         'background-image': value,

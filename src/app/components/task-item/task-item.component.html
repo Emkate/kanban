@@ -19,15 +19,17 @@
         [style.top]="tagsMenuPosition[1] + 'px'"
       ></app-button>
     </div>
-    <button
-      class="task-item__header-options"
-      (click)="openMenu($event, 'options')"
-      [class.menus__floating-button]="optionsMenuPosition[0]"
-      [style.right]="optionsMenuPosition[0] + 'px'"
-      [style.top]="optionsMenuPosition[1] + 'px'"
-    >
-      <ibm-icon-overflow-menu-horizontal class="header-options__icon" size="24"></ibm-icon-overflow-menu-horizontal>
-    </button>
+    <div class="task-item__options-button-wrapper">
+      <button
+        class="task-item__header-options"
+        (click)="openMenu($event, 'options')"
+        [class.menus__floating-button]="optionsMenuPosition[0]"
+        [style.right]="optionsMenuPosition[0] + 'px'"
+        [style.top]="optionsMenuPosition[1] + 'px'"
+      >
+        <ibm-icon-overflow-menu-horizontal class="header-options__icon" size="24"></ibm-icon-overflow-menu-horizontal>
+      </button>
+    </div>
   </div>
   <div class="task-item__content">
     {{ taskData.description }}
@@ -44,16 +46,19 @@
 
 <div *ngIf="taskData && tagsMenuPosition[0]"
   class="menus__tags-menu"
-  (click)="closeMenu()"
   [style.left]="tagsMenuPosition[0] + 'px'"
   [style.top]="tagsMenuPosition[1] + 30 + 'px'"
   [@enterAnimation]
 >
+  <ng-container *ngFor="let tag of tags">
+    <div class="tags-menu__tag-item" [class.tags-menu__tag-item--selected]="taskData.tagsIds.includes(tag.id)" (click)="selectTagItem(tag)">
+      <app-tag-item [data]="tag"></app-tag-item>
+    </div>
+  </ng-container>
 </div>
 
 <div *ngIf="taskData && optionsMenuPosition[0]"
   class="menus__options-menu"
-  (click)="closeMenu()"
   [style.right]="optionsMenuPosition[0] + 'px'"
   [style.top]="optionsMenuPosition[1] + 40 + 'px'"
   [@enterAnimation]

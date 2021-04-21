@@ -2,6 +2,8 @@ import { transition, trigger, useAnimation } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { filter, tap } from 'rxjs/operators';
 import { enterAnimation, leaveAnimation } from 'src/app/shared/animations';
+import { tags } from 'src/app/shared/data.mock';
+import { Tag } from 'src/app/shared/interfaces/tag.interface';
 import { DragService } from 'src/app/shared/services/drag.service';
 import { SharedService } from 'src/app/shared/services/shared.service';
 import { Task } from '../../shared/interfaces/task.interface';
@@ -23,6 +25,7 @@ export class TaskItemComponent implements OnInit {
   @Input() taskData: Task | undefined;
   tagsMenuPosition: [number, number] = [0, 0];
   optionsMenuPosition: [number, number] = [0, 0];
+  tags: Tag[] = tags;
 
   constructor(
     private dragService: DragService,
@@ -56,9 +59,6 @@ export class TaskItemComponent implements OnInit {
       return;
     }
 
-    console.log(button);
-    console.log(buttonPosition);
-
     this.getMenuPosition(menu, buttonPosition);
     this.sharedService.backdropVisible$.next(true);
   }
@@ -86,5 +86,19 @@ export class TaskItemComponent implements OnInit {
     }
 
     return elem.nodeName === 'BUTTON' ? elem : null;
+  }
+
+  selectTagItem(tag: Tag): void {
+    if (!this.taskData) {
+      return;
+    }
+
+    const isTaskPresent = this.taskData?.tagsIds.includes(tag.id);
+
+    if (isTaskPresent) {
+      this.taskData.tagsIds = this.taskData?.tagsIds.filter(id => id !== tag.id);
+    } else {
+      this.taskData?.tagsIds.push(tag.id);
+    }
   }
 }

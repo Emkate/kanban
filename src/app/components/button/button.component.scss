@@ -87,9 +87,10 @@
 .small-icon-button {
   padding: 0;
   border-radius: 50%;
+  background-color: #fff;
 
   &:hover {
-    background-color: rgba(42, 96, 228, 0.05);
+    background-color: rgb(238, 238, 238);
   }
 
   &__icon {

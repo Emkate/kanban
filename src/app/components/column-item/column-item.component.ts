@@ -36,8 +36,6 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
         const sidebarWidth = (document.getElementsByClassName('sidebar')[0] as HTMLElement).offsetWidth;
         const columnPos = [column.offsetLeft + sidebarWidth, column.offsetTop];
         const dragPosition = [dragEvent.x - columnPos[0], dragEvent.y - columnPos[1]];
-
-        console.log(dragPosition);
       }),
     ).subscribe();
 
