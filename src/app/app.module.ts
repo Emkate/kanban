@@ -22,6 +22,9 @@ import { ProjectsContainerComponent } from './containers/projects-container/proj
 import { ProjectItemComponent } from './components/project-item/project-item.component';
 import { BackgroundPipe } from './shared/pipes/background.pipe';
 import { BackdropComponent } from './components/backdrop/backdrop.component';
+import { SharedService } from './shared/services/shared.service';
+import { DataService } from './shared/services/data.service';
+import { DragService } from './shared/services/drag.service';
 
 const iconsModules = [
   GridModule,
@@ -59,7 +62,11 @@ const iconsModules = [
     AppRoutingModule,
     ...iconsModules
   ],
-  providers: [],
+  providers: [
+    DataService,
+    DragService,
+    SharedService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

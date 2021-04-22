@@ -4,6 +4,7 @@ import { filter, tap } from 'rxjs/operators';
 import { enterAnimation, leaveAnimation } from 'src/app/shared/animations';
 import { tags } from 'src/app/shared/data.mock';
 import { Tag } from 'src/app/shared/interfaces/tag.interface';
+import { DataService } from 'src/app/shared/services/data.service';
 import { DragService } from 'src/app/shared/services/drag.service';
 import { SharedService } from 'src/app/shared/services/shared.service';
 import { Task } from '../../shared/interfaces/task.interface';
@@ -30,6 +31,7 @@ export class TaskItemComponent implements OnInit {
   constructor(
     private dragService: DragService,
     private sharedService: SharedService,
+    private dataService: DataService
   ) { }
 
   ngOnInit(): void {

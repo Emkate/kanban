@@ -3,6 +3,7 @@ import { fromEvent } from 'rxjs';
 import { filter, map, switchMap, tap, throttleTime, withLatestFrom } from 'rxjs/operators';
 import { DragService } from 'src/app/shared/services/drag.service';
 import { ColumnItem } from 'src/app/shared/interfaces/column-item.interface';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-column-item',
@@ -13,7 +14,10 @@ export class ColumnItemComponent implements OnInit, AfterViewInit {
   @ViewChild('columnContent') columnContent?: ElementRef;
   @Input() data?: ColumnItem;
 
-  constructor(public dragService: DragService) { }
+  constructor(
+    public dragService: DragService,
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
   }
