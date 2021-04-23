@@ -14,6 +14,7 @@ export class MainContainerComponent implements OnInit {
   projectId?: number;
   columnItems = columns;
   selectedNavbarItem = '';
+  addColumnModalOpened = false;
 
   constructor(
     private activatedRoute: ActivatedRoute
@@ -32,5 +33,13 @@ export class MainContainerComponent implements OnInit {
 
   setSelectedNavbarState(navbarState: string): void {
     this.selectedNavbarItem = navbarState;
+  }
+
+  openColumnModal(): void {
+    this.addColumnModalOpened = true;
+  }
+
+  closeColumnModal(): void {
+    this.addColumnModalOpened = false;
   }
 }

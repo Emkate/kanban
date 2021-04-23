@@ -7,7 +7,16 @@
       <ng-container *ngFor="let column of columnItems">
         <app-column-item [data]="column"></app-column-item>
       </ng-container>
+      <button class="columns-container__add-button" (click)="openColumnModal()">
+        <div class="add-button__icon">
+          <ibm-icon-add class="add-button__icon-item" size="20"></ibm-icon-add>
+        </div>
+        <div class="add-button__text">Add new column</div>
+      </button>
     </div>
   </div>
   <app-backdrop></app-backdrop>
+  <app-modal [modalOpened]="addColumnModalOpened" title="Add new column" (modalClosed)="closeColumnModal()">
+    <div>test czy to gówno działa</div>
+  </app-modal>
 </div>

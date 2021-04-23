@@ -1,0 +1,47 @@
+.modal-item {
+  position: fixed;
+  min-width: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__header {
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% - 64px);
+      height: 2px;
+      border-radius: 4px;
+      background-color: #efefef;
+      bottom: 0;
+    }
+  }
+
+  &__content {
+    padding: 20px 32px;
+  }
+
+  &__footer {
+    padding: 20px 32px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% - 64px);
+      height: 2px;
+      border-radius: 4px;
+      background-color: #efefef;
+      top: 0;
+    }
+  }
+}

@@ -23,6 +23,45 @@
         padding: 0 24px;
         overflow-x: auto;
       }
+
+      &__add-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.02);
+        margin-top: 40px;
+        height: 80px;
+        width: 280px;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: .3s;
+        border-radius: 12px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .add-button {
+          &__icon {
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2a60e4;
+            margin-right: 8px;
+
+            ::ng-deep {
+              svg {
+                fill: #fff;
+              }
+            }
+          }
+
+          &__text {
+            font-weight: 700;
+            color: #2a60e4;
+          }
+        }
+      }
     }
   }
 }

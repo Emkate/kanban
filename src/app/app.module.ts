@@ -25,6 +25,7 @@ import { BackdropComponent } from './components/backdrop/backdrop.component';
 import { SharedService } from './shared/services/shared.service';
 import { DataService } from './shared/services/data.service';
 import { DragService } from './shared/services/drag.service';
+import { ModalComponent } from './components/modal/modal.component';
 
 const iconsModules = [
   GridModule,
@@ -54,7 +55,8 @@ const iconsModules = [
     NavPanelComponent,
     ProjectsContainerComponent,
     ProjectItemComponent,
-    BackdropComponent
+    BackdropComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
