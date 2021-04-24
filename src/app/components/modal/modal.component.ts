@@ -39,4 +39,7 @@ export class ModalComponent implements OnChanges, OnInit {
     ).subscribe();
   }
 
+  closeModal(): void {
+    this.sharedService.backdropVisible$.next(false);
+  }
 }

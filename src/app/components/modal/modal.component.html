@@ -1,7 +1,9 @@
 <div *ngIf="modalOpened" [@enterAnimation] class="modal-item">
   <div class="modal-item__header">
     <div class="modal-item__header-title">{{ title }}</div>
-    <button class="modal-item__header-close"></button>
+    <button class="modal-item__header-close" (click)="closeModal()">
+      <ibm-icon-add class="modal-item__close-icon" size="32"></ibm-icon-add>
+    </button>
   </div>
   <div class="modal-item__content">
     <ng-content></ng-content>
