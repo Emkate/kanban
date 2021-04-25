@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { tasks, tags, columns } from '../data.mock';
+import { ColumnItem } from '../interfaces/column-item.interface';
 import { Task } from '../interfaces/task.interface';
 
 @Injectable({
@@ -16,12 +17,35 @@ export class DataService {
         tasks, tags, columns
       };
 
+      this.data = data;
+
       localStorage.setItem('data', JSON.stringify(data));
+    } else {
+      this.data = JSON.parse(localStorage.getItem('data') || '{}');
     }
 
   }
 
   getTasks(): Task[] {
     return this.isDataStored ? this.data.tasks : tasks;
+  }
+
+  addColumn(name: string, projectId: number): ColumnItem {
+    const biggestId = [...this.data.columns].sort((first, second) => {
+      return first.id > second.id ? 1 : -1;
+    })[0].id;
+
+    const columnItem = {
+      id: biggestId + 1,
+      name,
+      projectId,
+      tasks: [],
+    };
+
+    this.data.columns.push(columnItem);
+
+    localStorage.setItem('data', JSON.stringify(this.data));
+
+    return columnItem;
   }
 }

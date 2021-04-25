@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { columns, projects } from 'src/app/shared/data.mock';
 import { Project } from 'src/app/shared/interfaces/project.interface';
+import { DataService } from 'src/app/shared/services/data.service';
+import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
   selector: 'app-main-container',
@@ -15,9 +18,12 @@ export class MainContainerComponent implements OnInit {
   columnItems = columns;
   selectedNavbarItem = '';
   addColumnModalOpened = false;
+  addColumnForm: FormGroup = new FormGroup({});
 
   constructor(
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private dataService: DataService,
+    private sharedService: SharedService
   ) {
     this.activatedRoute.params.pipe(
       tap(params => {
@@ -37,9 +43,22 @@ export class MainContainerComponent implements OnInit {
 
   openColumnModal(): void {
     this.addColumnModalOpened = true;
+    this.initAddingColumnForm();
   }
 
   closeColumnModal(): void {
     this.addColumnModalOpened = false;
+  }
+
+  initAddingColumnForm(): void {
+    this.addColumnForm = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+    });
+  }
+
+  saveColumnModal(): void {
+    this.dataService.addColumn(this.addColumnForm.controls.name.value, Number(this.projectId));
+    this.closeColumnModal();
+    this.sharedService.backdropVisible$.next(false);
   }
 }

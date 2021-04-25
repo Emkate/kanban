@@ -24,6 +24,10 @@
       bottom: 0;
     }
 
+    &-title {
+      font-weight: 600;
+    }
+
     &-close {
       padding: 0;
       display: flex;
@@ -59,6 +63,17 @@
       border-radius: 4px;
       background-color: #efefef;
       top: 0;
+    }
+
+    &-save {
+      font-weight: 600;
+      font-size: 16px;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      background-color: #2a60e4;
+      cursor: pointer;
+      color: #fff;
     }
   }
 }

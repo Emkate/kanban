@@ -16,7 +16,12 @@
     </div>
   </div>
   <app-backdrop></app-backdrop>
-  <app-modal [modalOpened]="addColumnModalOpened" title="Add new column" (modalClosed)="closeColumnModal()">
-    <div>test czy to gówno działa</div>
+  <app-modal [modalOpened]="addColumnModalOpened" title="Add new column" (modalClosed)="closeColumnModal()" (modalSave)="saveColumnModal()">
+    <form [formGroup]="addColumnForm" class="add-column-form">
+      <div class="add-column-form__input-wrapper">
+        <label class="add-column-form__label">Column name:</label>
+        <input *ngIf="addColumnModalOpened" type="text" formControlName="name" class="add-column-form__input">
+      </div>
+    </form>
   </app-modal>
 </div>

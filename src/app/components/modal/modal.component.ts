@@ -21,6 +21,7 @@ export class ModalComponent implements OnChanges, OnInit {
   @Input() modalOpened = false;
   @Input() title = '';
   @Output() modalClosed: EventEmitter<void> = new EventEmitter();
+  @Output() modalSave: EventEmitter<void> = new EventEmitter();
 
   constructor(
     private sharedService: SharedService
@@ -41,5 +42,9 @@ export class ModalComponent implements OnChanges, OnInit {
 
   closeModal(): void {
     this.sharedService.backdropVisible$.next(false);
+  }
+
+  saveModal(): void {
+    this.modalSave.emit();
   }
 }

@@ -26,6 +26,7 @@ import { SharedService } from './shared/services/shared.service';
 import { DataService } from './shared/services/data.service';
 import { DragService } from './shared/services/drag.service';
 import { ModalComponent } from './components/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const iconsModules = [
   GridModule,
@@ -62,6 +63,7 @@ const iconsModules = [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     ...iconsModules
   ],
   providers: [
