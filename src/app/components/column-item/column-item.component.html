@@ -5,6 +5,15 @@
     <ng-container *ngFor="let item of data.tasks">
       <app-task-item [taskData]="item"></app-task-item>
     </ng-container>
-    <app-button buttonText="Add another task"></app-button>
+    <app-button buttonText="Add another task" (click)="openTaskModal()"></app-button>
   </div>
 </div>
+
+<app-modal [modalOpened]="addTaskModalOpened" title="Add new task" (modalClosed)="closeTaskModal()" (modalSave)="saveTaskModal()">
+  <form [formGroup]="addTaskForm" class="add-task-form">
+    <div class="add-task-form__input-wrapper">
+      <label class="add-task-form__label">Task description:</label>
+      <textarea *ngIf="addTaskModalOpened" type="text" formControlName="description" class="add-task-form__input"></textarea>
+    </div>
+  </form>
+</app-modal>

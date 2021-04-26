@@ -48,4 +48,25 @@ export class DataService {
 
     return columnItem;
   }
+
+  addTask(description: string, columnId: number): Task {
+    const biggestId = [...this.data.tasks].sort((first, second) => {
+      return first.id > second.id ? 1 : -1;
+    })[0].id;
+
+    const taskItem = {
+      id: biggestId + 1,
+      description,
+      columnId,
+      tagsIds: [],
+      usersIds: [],
+      attachmentsIds: [],
+    };
+
+    this.data.tasks.push(taskItem);
+
+    localStorage.setItem('data', JSON.stringify(this.data));
+
+    return taskItem;
+  }
 }
